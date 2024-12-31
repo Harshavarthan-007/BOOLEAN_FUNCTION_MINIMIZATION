@@ -15,8 +15,8 @@ Hardware – PCs, Cyclone II , USB flasher
 **Software – Quartus prime**
 
 **Theory**
+![image](https://github.com/user-attachments/assets/d575c524-71d8-4325-9c27-11e4c85946ff)
 
-**Logic Diagram**
 
 **Procedure**
 
@@ -39,16 +39,11 @@ Developed by:Harshavarthan K P
 RegisterNumber:24900031*/
 ```
 ```
-module exe_2(f_and,f_or,f_not,f_nor,f_nand,f_xor,f_xnor,a,b);
-input a,b;
-output f_and,f_or,f_not,f_nor,f_nand,f_xor,f_xnor;
-and(f_and,a,b);
-or(f_or,a,b);
-not(f_not,a);
-nand(f_nand,a,b);
-nor(f_nor,a,b);
-xor(f_xor,a,b);
-xnor(f_xnor,a,b);
+module EXP2MAIN(a,b,c,d,w,x,y,z,f1,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+assign f1=((~b&~d)|(~a&b&d)|(a&b&~c));
+assign f2=((~y&z)|(x&y)|(w&y));
 endmodule
 ```
 
